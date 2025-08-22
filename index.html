@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workshop 2025 - SREC Nandyal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; }
+        
+        /* Header Styles */
+        header { 
+            position: fixed; top: 0; width: 100%; z-index: 1000; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 2rem; transition: all 0.3s;
+        }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: white; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; transition: 0.3s; }
+        .nav-links a:hover { color: #ffd700; transform: translateY(-2px); }
+        .search-container { position: relative; }
+        .search-box { 
+            padding: 0.5rem 1rem; border-radius: 25px; border: none; 
+            background: rgba(255,255,255,0.9); width: 200px; transition: 0.3s;
+        }
+        .search-box:focus { width: 250px; outline: none; }
+        .signin-btn { 
+            background: #ffd700; color: #333; padding: 0.5rem 1rem; 
+            border-radius: 25px; text-decoration: none; transition: 0.3s;
+        }
+        .signin-btn:hover { transform: scale(1.05); }
+
+        /* Enhanced Hero Section */
+       .hero {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 20px;
+    z-index: 3;
+    position: relative;
+   
+}
+
+.event-status {
+    background: #22c55e;
+    color: #fff;
+    padding: 20px 15px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    position: relative;
+    top: 170px;
+    display: inline-block;
+}
+
+.registration-status .closed {
+    background: #e11d48;
+    padding: 2px 8px;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+    display: inline-block;
+}
+
+.top-btn {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #333;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(255,215,0,0.3);
+    position: relative;
+    top: 170px;
+    
+    margin-right: 350px;
+    display: inline-block;
+}
+
+    
+}
+
+.top-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255,215,0,0.4);
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    
+    width: 100%;
+    z-index: 2;
+    padding: 2rem;
+
+}
+
+.hero-content {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 120px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-stat {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.hero-stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* Animation Canvas */
+.hero-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    position: relative;
+    top: 120px; /* Adjust this value to move it down */
+    margin-left: 200px;
+}
+
+    
+
+
+#aiAnimation {
+    width: 400%;
+    
+    height: 400px;
+    background: #1e3c72, #2a5298;
+    border-radius: 12px;
+    
+}
+
+
+        /* Enhanced Live Timeline with Transport-style Tracking */
+        .timeline-section { padding: 5rem 2rem; background: #f8f9fa; }
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-live-status {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        .timeline-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-track {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline-rail {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 6px;
+            background: linear-gradient(to bottom, #e9ecef, #dee2e6);
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        
+        .timeline-progress {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #28a745, #20c997);
+            transform: translateX(-50%);
+            border-radius: 10px;
+            transition: height 1s ease-in-out;
+        }
+        
+        .timeline-train {
+            position: absolute;
+            left: 50%;
+            width: 40px;
+            height: 20px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 10px;
+            transform: translateX(-50%);
+            transition: top 1s ease-in-out;
+            box-shadow: 0 3px 10px rgba(255,215,0,0.5);
+            z-index: 10;
+        }
+        
+        .timeline-train::before {
+            content: '🚂';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8rem;
+        }
+        
+        .timeline-station {
+            position: relative;
+            margin: 3rem 0;
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+        }
+        
+        .timeline-station:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+        
+        .timeline-station:nth-child(odd) .station-content {
+            margin-left: 5%;
+            margin-right: auto;
+            text-align: left;
+        }
+        
+        .timeline-station:nth-child(even) .station-content {
+            margin-left: auto;
+            margin-right: 5%;
+            text-align: right;
+        }
+        
+        .station-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            width: 45%;
+            position: relative;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s;
+        }
+        
+        .station-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .station-content.completed {
+            border-color: #28a745;
+            background: linear-gradient(135deg, #d4edda, #ffffff);
+        }
+        
+        .station-content.current {
+            border-color: #ffd700;
+            background: linear-gradient(135deg, #fff3cd, #ffffff);
+            animation: glow 2s infinite alternate;
+        }
+        
+        .station-content.upcoming {
+            border-color: #6c757d;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            opacity: 0.7;
+        }
+        
+        .station-dot {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            border: 4px solid white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            z-index: 5;
+        }
+        
+        .station-dot.completed {
+            background: #28a745;
+            animation: checkmark 0.5s ease-in-out;
+        }
+        
+        .station-dot.current {
+            background: #ffd700;
+            animation: pulse 2s infinite;
+        }
+        
+        .station-dot.upcoming {
+            background: #6c757d;
+        }
+        
+        .station-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .status-completed {
+            background: #28a745;
+            color: white;
+        }
+        
+        .status-current {
+            background: #ffd700;
+            color: #333;
+        }
+        
+        .status-upcoming {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .station-time {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+        
+        .current-time {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        /* Enhanced About Section */
+        .about { 
+            padding: 5rem 2rem; 
+            background: linear-gradient(135deg, #f8f9ff 0%, #fff 50%, #f0f8ff 100%);
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .about-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .about-content {
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        
+        .about-content h2 { 
+            font-size: 2.5rem; 
+            margin-bottom: 1.5rem; 
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .about-image { 
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 20px; 
+            height: 400px; 
+            position: relative; 
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(102,126,234,0.3);
+        }
+        
+        .about-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .about-image-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-image-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .college-stats { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 2rem; 
+            margin-top: 2rem; 
+        }
+        
+        .stat { 
+            text-align: center; 
+            padding: 2rem; 
+            background: white; 
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .stat:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+        
+        .stat:hover::before {
+            width: 100%;
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-number { 
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* AI Workshop Details */
+        .workshop-details { padding: 5rem 2rem; background: linear-gradient(135deg, #f5f7ff 0%, #fff 100%); }
+        .workshop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .workshop-card { 
+            background: white; padding: 2rem; border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: 0.3s;
+            position: relative; overflow: hidden;
+        }
+        .workshop-card:hover { transform: translateY(-10px); }
+        .workshop-card::before { 
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        .ai-animation { 
+            width: 100px; height: 100px; margin: 0 auto 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%; position: relative;
+            animation: rotate 3s linear infinite;
+        }
+        .ai-animation::before { 
+            content: 'AI'; position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%); color: white; font-weight: bold;
+        }
+
+       /* Team Section */
+.team {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f6f9fc, #e9eef5);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: #333;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #764ba2;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+.team-member:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.member-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    border: 4px solid #764ba2;
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.4);
+    transition: transform 0.5s ease;
+}
+.team-member:hover .member-photo {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.team-member .role {
+    font-weight: 600;
+    color: #764ba2;
+    margin-bottom: 0.8rem;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Animation on Load */
+.team-member {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 0.8s ease forwards;
+}
+.team-member:nth-child(1) { animation-delay: 0.2s; }
+.team-member:nth-child(2) { animation-delay: 0.4s; }
+.team-member:nth-child(3) { animation-delay: 0.6s; }
+.team-member:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+        /* Contact Section */
+        .contact { padding: 5rem 2rem; background: #1e3c72; color: white; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .contact-info { padding: 2rem; }
+        .contact-item { margin-bottom: 1rem; display: flex; align-items: center; }
+        .contact-icon { margin-right: 1rem; font-size: 1.5rem; color: #ffd700; }
+        
+        /* Footer */
+        footer { background: #000000; color: white; text-align: center; padding: 2rem; }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); }}
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); }}
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); }}
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); }}
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); }}
+        @keyframes glow { from { box-shadow: 0 0 10px rgba(255,215,0,0.3); } to { box-shadow: 0 0 20px rgba(255,215,0,0.6); }}
+        @keyframes checkmark { 0% { transform: translate(-50%, -50%) scale(0); } 100% { transform: translate(-50%, -50%) scale(1); }}
+
+        /* Live Counter */
+        .live-counter { 
+            position: fixed; top: 100px; right: 20px; background: #28a745;
+            color: white; padding: 1rem; border-radius: 10px; z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .section-title { 
+            text-align: center; font-size: 2.5rem; margin-bottom: 3rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        /* Modal Styles */
+        .modal { 
+            display: none; position: fixed; z-index: 2000; left: 0; top: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.8);
+        }
+        .modal-content { 
+            background: white; margin: 10% auto; padding: 2rem;
+            width: 80%; max-width: 500px; border-radius: 15px;
+        }
+        .close { float: right; font-size: 2rem; cursor: pointer; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .timeline-rail { left: 20px; }
+            .station-content { width: 80%; margin-left: 50px !important; text-align: left !important; }
+            .nav-links { display: none; }
+            .workshop-grid { grid-template-columns: 1fr; }
+            .college-stats { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SREC AI Workshop 2025</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#workshop">Workshop</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search..." id="searchBox">
+            </div>
+            <a href="#" class="signin-btn" onclick="openSigninModal()">Sign In</a>
+        </nav>
+    </header>
+
+    <!-- Live Event Counter -->
+    <div class="live-counter">
+        <div>Days to Event: <span id="dayCounter">0</span></div>
+        <div>Registration: <span id="regStatus">Open</span></div>
+    </div>
+
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+
+    <!-- Top Bar for Event Status & Register Button -->
+    <div class="top-bar">
+        
+        <a href="#workshop" class="cta-btn top-btn">Register Now</a>
+    </div>
+
+    <div class="hero-container">
+        <!-- Left Content -->
+        <div class="hero-content">
+            <h1>AI Workshop 2025</h1>
+            <p>Discover the Future of Artificial Intelligence at SREC Nandyal. Join us for an immersive learning experience with industry experts, hands-on projects, and cutting-edge AI technologies.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number" id="liveParticipants">762+</div>
+                    <div>Registered</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">6</div>
+                    <div>Days Event</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Animation -->
+        <div class="hero-animation">
+    <!-- Video -->
+    <video class="ai-video" autoplay muted loop>
+        <source src="ai.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Canvas Animation (Optional, can keep or remove) -->
+    <canvas id="aiAnimation"></canvas>
+</div>
+
+    </div>
+</section>
+<style>.hero-animation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai-video {
+    width: 170%;
+    height: 400px; /* Adjust based on your design */
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute; /* Places video behind the animation if both are used */
+    z-index: 1;
+}
+
+#aiAnimation {
+    width: 150%;
+    height: 400px;
+    position: relative;
+    z-index: 2; /* Keeps canvas animation above the video */
+    background: transparent; /* Transparent so video is visible */
+}
+</style>
+<!--<script>
+const canvas = document.getElementById("aiAnimation");
+const ctx = canvas.getContext("2d");
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+const particles = [];
+for (let i = 0; i < 100; i++) {
+    particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 4,
+        dx: (Math.random() - 0.5) * 2,
+        dy: (Math.random() - 0.5) * 2
+    });
+}
+
+function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = "#38bdf8";
+        ctx.fill();
+        ctx.closePath();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    });
+    requestAnimationFrame(drawParticles);
+}
+
+drawParticles();
+</script>-->
+
+
+    <!-- Enhanced Live Timeline -->
+    <section class="timeline-section">
+        <div class="timeline-header">
+            <div class="timeline-live-status">🚀 Live Event Tracking</div>
+            <h2 class="section-title">Workshop Journey Timeline</h2>
+            <div class="current-time">
+                Current Date: <span id="currentDateTime"></span>
+            </div>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-track">
+                <div class="timeline-rail"></div>
+                <div class="timeline-progress" id="timelineProgress"></div>
+                <div class="timeline-train" id="timelineTrain"></div>
+                
+                <div class="timeline-station" id="station1">
+                    <div class="station-dot" id="dot1"></div>
+                    <div class="station-content" id="content1">
+                        <div class="station-status" id="status1">Completed</div>
+                        <h3>🎯 Registration Opens</h3>
+                        <p>August 10, 2025 - Registration portal goes live for all students. Early bird discounts available!</p>
+                        <div class="station-time">Completed on: Aug 10, 2025 at 09:00 AM</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-station" id="station2">
+                    <div class="station-dot" id="dot2"></div>
+                    <div class="station-content" id="content2">
+                        <div class="station-status" id="status2">Current</div>
+                        <h3>📚 Pre-Workshop Materials</h3>
+                        <p>August 15-19, 2025 - Distribution of study materials, software setup guides, and prerequisite tutorials.</p>
+                        <div class="station-time">In Progress: Started Aug 15, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-station" id="station3">
+                    <div class="station-dot" id="dot3"></div>
+                    <div class="station-content" id="content3">
+                        <div class="station-status" id="status3">Upcoming</div>
+                        <h3>🚀 AI Workshop Day 1</h3>
+                        <p>August 20, 2025 - Opening ceremony, AI fundamentals, and hands-on Python programming sessions.</p>
+                        <div class="station-time">Scheduled: Aug 20, 2025 at 09:00 AM</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-station" id="station4">
+                    <div class="station-dot" id="dot4"></div>
+                    <div class="station-content" id="content4">
+                        <div class="station-status" id="status4">Upcoming</div>
+                        <h3>🤖 Machine Learning Deep Dive</h3>
+                        <p>August 21, 2025 - Advanced ML algorithms, neural networks, and practical implementations.</p>
+                        <div class="station-time">Scheduled: Aug 21, 2025 at 09:00 AM</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-station" id="station5">
+                    <div class="station-dot" id="dot5"></div>
+                    <div class="station-content" id="content5">
+                        <div class="station-status" id="status5">Upcoming</div>
+                        <h3>🏆 Project Showcase & Certification</h3>
+                        <p>August 22, 2025 - Student project presentations, awards ceremony, and certificate distribution.</p>
+                        <div class="station-time">Scheduled: Aug 22, 2025 at 02:00 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced About SREC -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-header">
+                <h2 class="section-title">About Santhiram Engineering College</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Excellence in Engineering Education</h2>
+                    <p>🎓 Santhiram Engineering College (SREC) is sponsored by M/s Sri Shirdi Sai Educational Academy, Nandyal. Established under the able guidance of Dr. M. Santhiramudu in 2007 with the noble motto "Education for peace and progress".</p>
+                    <p>🏆 SREC is approved by AICTE, New Delhi, recognized by UGC under 2(f) and 12(B), permanently affiliated to JNTUA Ananthapuramu, and certified to ISO 9001:2015. The college is ranked as one of the Best Engineering Colleges of JNTUA.</p>
+                    <p>🌟 Located on NH-40, 12 KM away from Nandyal, Kurnool District, Andhra Pradesh, SREC provides world-class technical education with state-of-the-art facilities and innovative learning methodologies.</p>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-overlay">
+                        <div class="about-image">
+    <div class="image-frame">
+        <img src="srec.jpg" alt="College Campus">
+    </div>
+</div>
+<style>.about-image {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjustable */
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(102,126,234,0.3);
+}
+
+.image-frame img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Makes image fill container proportionally */
+    border-radius: 20px;
+    animation: zoomInOut 10s infinite ease-in-out;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* For multiple images in a slider */
+.image-slider {
+    display: flex;
+    width: 300%;
+    animation: slideImages 12s infinite;
+}
+
+.image-slider img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@keyframes slideImages {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+</style>
+                    </div>
+                </div>
+            </div>
+            <div class="college-stats">
+                <div class="stat">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">🎓</div>
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Engineering Courses</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Alumni Network</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">🤖</div>
+                    <div class="stat-number" id="registrationCount">750+</div>
+                    <div class="stat-label">Workshop Registrations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Details -->
+    <section id="workshop" class="workshop-details">
+        <div class="container">
+            <h2 class="section-title">AI Workshop Details</h2>
+            <div class="workshop-grid">
+                <div class="workshop-card">
+                    <div class="ai-animation"></div>
+                    <h3>What is AI?</h3>
+                    <p>Artificial Intelligence (AI) is the simulation of human intelligence in machines programmed to think, learn, and problem-solve like humans. It encompasses machine learning, natural language processing, computer vision, and robotics.</p>
+                </div>
+                <div class="workshop-card">
+                    <div class="ai-animation" style="animation-delay: 0.5s;"></div>
+                    <h3>Why Use AI?</h3>
+                    <p>AI revolutionizes industries by automating tasks, improving decision-making, enhancing efficiency, reducing costs, and enabling innovations in healthcare, finance, transportation, and education.</p>
+                </div>
+                <div class="workshop-card">
+                    <div class="ai-animation" style="animation-delay: 1s;"></div>
+                    <h3>Current Role of AI</h3>
+                    <p>AI powers search engines, recommendation systems, autonomous vehicles, medical diagnostics, smart assistants, fraud detection, and personalized learning platforms, transforming how we live and work.</p>
+                </div>
+                <div class="workshop-card">
+                    <div class="ai-animation" style="animation-delay: 1.5s;"></div>
+                    <h3>Workshop Sessions</h3>
+                    <p>Interactive sessions covering AI fundamentals, machine learning algorithms, Python programming, data analysis, neural networks, and hands-on projects with real-world applications.</p>
+                </div>
+                <div class="workshop-card">
+                    <div class="ai-animation" style="animation-delay: 2s;"></div>
+                    <h3>Career Opportunities</h3>
+                    <p>Explore careers as AI Engineer, Data Scientist, Machine Learning Engineer, AI Research Scientist, Robotics Engineer, and AI Product Manager in leading tech companies.</p>
+                </div>
+                <div class="workshop-card">
+                    <div class="ai-animation" style="animation-delay: 2.5s;"></div>
+                    <h3>Certification</h3>
+                    <p>Receive official certification from SREC upon successful completion of the workshop, adding valuable credentials to your academic and professional portfolio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+    <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="chairman.jpg" alt="Dr. M. Santhiramudu">
+                </div>
+                <h3>Dr. M. Santhiramudu</h3>
+                <p class="role">Chairman & Founder</p>
+                <p>Visionary leader with 25+ years in education</p>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="principal.jpg" alt="Principal">
+                </div>
+                <h3>Dr. Principal</h3>
+                <p class="role">Principal, SREC</p>
+                <p>Expert in Engineering Education & Research</p>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="hod.jpg" alt="AI Expert">
+                </div>
+                <h3>Dr.R.Rama Devi </h3>
+                <p class="role">HOD of CSE-Data Science</p>
+                <p>AI Researcher & Machine Learning Specialist</p>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="co-ordinator.jpg" alt="CSE Faculty">
+                </div>
+                <h3>Dr.K.Venkatesh Naik </h3>
+                <p class="role">Event Coordinator</p>
+                <p>Computer Science & AI Implementation Expert</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Developers Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Development Team</h2>
+            <div class="team-grid">
+                <div class="team-grid">
+                <div class="team-member">
+                <div class="member-photo">
+                    <img src="lal.jpg" alt="AI Expert">
+                </div>
+                <h3>Mr.SHAIK LALU BASHA</h3>
+                <p class="role">Frontend & Backend Developer</p>
+                <p>SREC CSE-Design Department Student</p>
+            </div>
+                <!--<div class="team-member">
+                    <div class="member-photo">UI</div>
+                    <h3>UI/UX Design Team</h3>
+                    <p>Interface Designers</p>
+                    <p>Creative Design & User Experience</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">DB</div>
+                    <h3>Database Team</h3>
+                    <p>Data Management</p>
+                    <p>Registration & Analytics System</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">QA</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Testing & Validation</p>
+                    <p>Ensuring Perfect User Experience</p>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Santhiram Engineering College<br>
+                            NH-40, Nandyal-518501<br>
+                            Kurnool District, Andhra Pradesh
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            +91 8514 259 999<br>
+                            +91 8514 259 888
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <strong>Email:</strong><br>
+                            info@srecnandyal.edu.in<br>
+                            aiworkshop@srecnandyal.edu.in
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>Workshop Coordinators</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">👨‍🏫</span>
+                        <div>
+                            <strong>Faculty Coordinator:</strong><br>
+                            Dr. CSE Head<br>
+                            +91 9876 543 210
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🎓</span>
+                        <div>
+                            <strong>Student Coordinator:</strong><br>
+                            AI Club President<br>
+                            +91 9876 543 211
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <div>
+                            <strong>Website:</strong><br>
+                            www.srecnandyal.edu.in<br>
+                            Follow us @srecndl on Instagram
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="color: rgb(238, 255, 0);">&copy; 2025 Santhiram Engineering College, Nandyal. All rights reserved.</p>
+            <p>AI Workshop 2025 - Empowering Future Engineers with Artificial Intelligence</p>
+            <div style="margin-bottom: 5px;">
+    Developed by <strong style="color: rgb(249, 249, 250);">Shaik Lalu Basha</strong> | 📞 <a href="tel:+91 7993417685" style="color: #60a5fa; text-decoration: none;">+91 7993417685</a>
+  </div>
+  <div>
+    🔋 Powered by <strong style="color: #34d399;">ESCORT TECH HUB</strong>
+  </div>
+
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div id="signinModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSigninModal()">&times;</span>
+            <h2>Sign In</h2>
+            <form>
+                <div style="margin-bottom: 1rem;">
+                    <label>Email:</label>
+                    <input type="email" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label>Password:</label>
+                    <input type="password" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <button type="submit" style="width: 100%; padding: 0.8rem; background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none; border-radius: 5px; cursor: pointer;">Sign In</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">
+                <a href="#" style="color: #667eea;">Forgot Password?</a> | 
+                <a href="#" style="color: #667eea;">Create Account</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Event dates and timeline management
+        const currentDate = new Date();
+        const eventStartDate = new Date('2025-08-20T09:00:00');
+        const timelineEvents = [
+            { date: new Date('2025-08-10T09:00:00'), id: 'station1', name: 'Registration Opens' },
+            { date: new Date('2025-08-15T09:00:00'), id: 'station2', name: 'Pre-Workshop Materials' },
+            { date: new Date('2025-08-20T09:00:00'), id: 'station3', name: 'Workshop Day 1' },
+            { date: new Date('2025-08-21T09:00:00'), id: 'station4', name: 'Machine Learning Deep Dive' },
+            { date: new Date('2025-08-22T14:00:00'), id: 'station5', name: 'Project Showcase' }
+        ];
+        
+        function updateCurrentDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('currentDateTime').textContent = now.toLocaleDateString('en-US', options);
+        }
+        
+        function updateEventCounter() {
+            const now = new Date();
+            const timeDiff = eventStartDate - now;
+            const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+            
+            document.getElementById('dayCounter').textContent = days > 0 ? days : 'Event Started!';
+            
+            // Update registration status
+            const regCloseDate = new Date('2025-08-19T23:59:59');
+            const regStatus = now < regCloseDate ? 'Open' : 'Closed';
+            const regStatusEl = document.getElementById('regStatus');
+            regStatusEl.textContent = regStatus;
+            regStatusEl.style.background = regStatus === 'Open' ? '#28a745' : '#dc3545';
+        }
+        
+        function updateTimelineProgress() {
+            const now = new Date();
+            let currentEventIndex = -1;
+            let progressPercentage = 0;
+            
+            // Find current event
+            for (let i = 0; i < timelineEvents.length; i++) {
+                if (now >= timelineEvents[i].date) {
+                    currentEventIndex = i;
+                } else {
+                    break;
+                }
+            }
+            
+            // Calculate progress percentage
+            if (currentEventIndex >= 0) {
+                progressPercentage = ((currentEventIndex + 1) / timelineEvents.length) * 100;
+                
+                // If we're between events, calculate intermediate progress
+                if (currentEventIndex < timelineEvents.length - 1) {
+                    const currentEvent = timelineEvents[currentEventIndex];
+                    const nextEvent = timelineEvents[currentEventIndex + 1];
+                    const eventDuration = nextEvent.date - currentEvent.date;
+                    const elapsed = now - currentEvent.date;
+                    const eventProgress = Math.min(elapsed / eventDuration, 1);
+                    progressPercentage = ((currentEventIndex + eventProgress) / timelineEvents.length) * 100;
+                }
+            }
+            
+            // Update visual progress
+            const progressBar = document.getElementById('timelineProgress');
+            const train = document.getElementById('timelineTrain');
+            
+            progressBar.style.height = Math.min(progressPercentage, 100) + '%';
+            train.style.top = Math.min(progressPercentage, 100) + '%';
+            
+            // Update station statuses
+            timelineEvents.forEach((event, index) => {
+                const stationContent = document.getElementById(`content${index + 1}`);
+                const stationDot = document.getElementById(`dot${index + 1}`);
+                const stationStatus = document.getElementById(`status${index + 1}`);
+                
+                if (now >= event.date) {
+                    // Completed
+                    stationContent.className = 'station-content completed';
+                    stationDot.className = 'station-dot completed';
+                    stationStatus.className = 'station-status status-completed';
+                    stationStatus.textContent = '✅ Completed';
+                } else if (index === currentEventIndex + 1) {
+                    // Current/Next
+                    stationContent.className = 'station-content current';
+                    stationDot.className = 'station-dot current';
+                    stationStatus.className = 'station-status status-current';
+                    stationStatus.textContent = '🔄 In Progress';
+                } else {
+                    // Upcoming
+                    stationContent.className = 'station-content upcoming';
+                    stationDot.className = 'station-dot upcoming';
+                    stationStatus.className = 'station-status status-upcoming';
+                    stationStatus.textContent = '⏳ Upcoming';
+                }
+            });
+        }
+        
+        // Live registration counter
+        let registrationCount = 750;
+        function updateRegistrationCount() {
+            registrationCount += Math.floor(Math.random() * 5) + 1;
+            const regCountEl = document.getElementById('registrationCount');
+            const liveParticipants = document.getElementById('liveParticipants');
+            if (regCountEl) regCountEl.textContent = registrationCount + '+';
+            if (liveParticipants) liveParticipants.textContent = registrationCount + '+';
+        }
+        
+        // Search functionality
+        document.getElementById('searchBox').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const content = section.textContent.toLowerCase();
+                if (content.includes(searchTerm) || searchTerm === '') {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Modal functions
+        function openSigninModal() {
+            document.getElementById('signinModal').style.display = 'block';
+        }
+        
+        function closeSigninModal() {
+            document.getElementById('signinModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('signinModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(102, 126, 234, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = entry.target.dataset.animation || 'fadeInUp 0.6s forwards';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.timeline-station, .workshop-card, .team-member, .stat').forEach(el => {
+            el.style.opacity = '0';
+            el.dataset.animation = 'fadeInUp 0.6s forwards';
+            observer.observe(el);
+        });
+        
+        // Initialize all updates
+        function initializeCounters() {
+            updateCurrentDateTime();
+            updateEventCounter();
+            updateTimelineProgress();
+        }
+        
+        // Start all timers
+        initializeCounters();
+        setInterval(updateCurrentDateTime, 1000); // Update every second
+        setInterval(updateEventCounter, 60000); // Update every minute
+        setInterval(updateTimelineProgress, 60000); // Update every minute
+        setInterval(updateRegistrationCount, 30000); // Update every 30 seconds
+        
+        // Registration form handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('🎉 Sign in functionality would be implemented with backend integration. Currently in demo mode for AI Workshop 2025!');
+            closeSigninModal();
+        });
+        
+        // Dynamic AI animations
+        const aiAnimations = document.querySelectorAll('.ai-animation');
+        aiAnimations.forEach((animation, index) => {
+            animation.addEventListener('mouseenter', function() {
+                this.style.animationDuration = '0.5s';
+            });
+            animation.addEventListener('mouseleave', function() {
+                this.style.animationDuration = '3s';
+            });
+        });
+        
+        // Hero video fallback with animated SVG background
+        const heroVideo = document.querySelector('.hero-video');
+        heroVideo.style.background = `
+            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+                <defs>
+                    <radialGradient id="grad">
+                        <stop offset="0%" stop-color="%23667eea"/>
+                        <stop offset="100%" stop-color="%23764ba2"/>
+                    </radialGradient>
+                </defs>
+                <rect width="1000" height="1000" fill="url(%23grad)"/>
+                <g opacity="0.2">
+                    <circle cx="200" cy="200" r="100" fill="white">
+                        <animate attributeName="r" values="50;150;50" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="800" cy="300" r="80" fill="white">
+                        <animate attributeName="r" values="40;120;40" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="500" cy="700" r="120" fill="white">
+                        <animate attributeName="r" values="60;180;60" dur="5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="300" cy="500" r="90" fill="white">
+                        <animate attributeName="r" values="45;135;45" dur="3.5s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+            </svg>') center/cover
+        `;
+        
+        console.log('🚀 SREC AI Workshop 2025 - Enhanced Website loaded successfully!');
+        console.log('✨ Features: Live timeline tracking, transport-style progress, enhanced hero section, real-time counters');
+        console.log('🎯 Event Date: August 20, 2025 | Current tracking system active');
+    </script>
+</body>
+</html>
