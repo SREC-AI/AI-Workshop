@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Workshop 2025 - SREC Nandyal</title>
+    <title>Gen AI Workshop 2025 - SREC Nandyal</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; }
@@ -720,7 +720,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">SREC AI Workshop 2025</div>
+            <div class="logo">SREC Generative AI Workshop 2025</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -754,8 +754,8 @@
     <div class="hero-container">
         <!-- Left Content -->
         <div class="hero-content">
-            <h1>AI Workshop 2025</h1>
-            <p>Discover the Future of Artificial Intelligence at SREC Nandyal. Join us for an immersive learning experience with industry experts, hands-on projects, and cutting-edge AI technologies.</p>
+            <h1>Prompt Engineering for Generative AI</h1>
+            <p>Discover the Future of Prompt Engineering for Generative AI at SREC Nandyal. Join us for an immersive learning experience with industry experts, hands-on projects, and cutting-edge AI technologies.</p>
             <div class="hero-stats">
                 <div class="hero-stat">
                     <div class="hero-stat-number" id="liveParticipants">762+</div>
@@ -846,72 +846,97 @@ drawParticles();
 
 
     <!-- Enhanced Live Timeline -->
-    <section class="timeline-section">
-        <div class="timeline-header">
-            <div class="timeline-live-status">🚀 Live Event Tracking</div>
-            <h2 class="section-title">Workshop Journey Timeline</h2>
-            <div class="current-time">
-                Current Date: <span id="currentDateTime"></span>
-            </div>
+<section class="timeline-section">
+    <div class="timeline-header">
+        <div class="timeline-live-status">🚀 Live Event Tracking</div>
+        <h2 class="section-title">Workshop Journey Timeline</h2>
+        <div class="current-time">
+            Current Date: <span id="currentDateTime"></span>
         </div>
-        <div class="timeline-container">
-            <div class="timeline-track">
-                <div class="timeline-rail"></div>
-                <div class="timeline-progress" id="timelineProgress"></div>
-                <div class="timeline-train" id="timelineTrain"></div>
-                
-                <div class="timeline-station" id="station1">
-                    <div class="station-dot" id="dot1"></div>
-                    <div class="station-content" id="content1">
-                        <div class="station-status" id="status1">Completed</div>
-                        <h3>🎯 Registration Opens</h3>
-                        <p>August 10, 2025 - Registration portal goes live for all students. Early bird discounts available!</p>
-                        <div class="station-time">Completed on: Aug 10, 2025 at 09:00 AM</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-station" id="station2">
-                    <div class="station-dot" id="dot2"></div>
-                    <div class="station-content" id="content2">
-                        <div class="station-status" id="status2">Current</div>
-                        <h3>📚 Pre-Workshop Materials</h3>
-                        <p>August 15-19, 2025 - Distribution of study materials, software setup guides, and prerequisite tutorials.</p>
-                        <div class="station-time">In Progress: Started Aug 15, 2025</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-station" id="station3">
-                    <div class="station-dot" id="dot3"></div>
-                    <div class="station-content" id="content3">
-                        <div class="station-status" id="status3">Upcoming</div>
-                        <h3>🚀 AI Workshop Day 1</h3>
-                        <p>August 20, 2025 - Opening ceremony, AI fundamentals, and hands-on Python programming sessions.</p>
-                        <div class="station-time">Scheduled: Aug 20, 2025 at 09:00 AM</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-station" id="station4">
-                    <div class="station-dot" id="dot4"></div>
-                    <div class="station-content" id="content4">
-                        <div class="station-status" id="status4">Upcoming</div>
-                        <h3>🤖 Machine Learning Deep Dive</h3>
-                        <p>August 21, 2025 - Advanced ML algorithms, neural networks, and practical implementations.</p>
-                        <div class="station-time">Scheduled: Aug 21, 2025 at 09:00 AM</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-station" id="station5">
-                    <div class="station-dot" id="dot5"></div>
-                    <div class="station-content" id="content5">
-                        <div class="station-status" id="status5">Upcoming</div>
-                        <h3>🏆 Project Showcase & Certification</h3>
-                        <p>August 22, 2025 - Student project presentations, awards ceremony, and certificate distribution.</p>
-                        <div class="station-time">Scheduled: Aug 22, 2025 at 02:00 PM</div>
-                    </div>
+    </div>
+    <div class="timeline-container">
+        <div class="timeline-track">
+            <div class="timeline-rail"></div>
+            <div class="timeline-progress" id="timelineProgress"></div>
+            <div class="timeline-train" id="timelineTrain"></div>
+
+            <!-- Day 1 -->
+            <div class="timeline-station" id="station1">
+                <div class="station-dot" id="dot1"></div>
+                <div class="station-content" id="content1">
+                    <div class="station-status" id="status1">Upcoming</div>
+                    <h3>📖 Day 1 - NLP & Transformers</h3>
+                    <p>Morning: Workshop Training<br>
+                    Afternoon: Lab Session<br>
+                    Topics: Evolution of NLP, Tokenization (BPE, WordPiece), Transformers basics (Attention, Encoder vs Decoder), Metrics (classification, summarization, QA).</p>
+                    <div class="station-time">Scheduled: Sept 08, 2025 at 09:00 AM</div>
                 </div>
             </div>
+
+            <!-- Day 2 -->
+            <div class="timeline-station" id="station2">
+                <div class="station-dot" id="dot2"></div>
+                <div class="station-content" id="content2">
+                    <div class="station-status" id="status2">Upcoming</div>
+                    <h3>🤖 Day 2 - LLM Architectures</h3>
+                    <p>Morning: Workshop Training<br>
+                    Afternoon: Lab Session<br>
+                    Topics: LLM Architectures (GPT, LLaMA, Mistral, Qwen, Phi, Gemma), PEFT, LoRA/QLoRA, Model comparisons (size, license, context length, throughput).</p>
+                    <div class="station-time">Scheduled: Sept 09, 2025 at 09:00 AM</div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="timeline-station" id="station3">
+                <div class="station-dot" id="dot3"></div>
+                <div class="station-content" id="content3">
+                    <div class="station-status" id="status3">Upcoming</div>
+                    <h3>💬 Day 3 - Chat Interfaces</h3>
+                    <p>Morning: Workshop Training<br>
+                    Afternoon: Lab Session<br>
+                    Topics: Building Chat Interfaces with Open-Source LLMs, Interface patterns (roles, turns, memory), RAG, embeddings, vector DBs, Tool/Function calling.</p>
+                    <div class="station-time">Scheduled: Sept 10, 2025 at 09:00 AM</div>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="timeline-station" id="station4">
+                <div class="station-dot" id="dot4"></div>
+                <div class="station-content" id="content4">
+                    <div class="station-status" id="status4">Upcoming</div>
+                    <h3>🧑‍🏫 Day 4 - AI Tutor Systems</h3>
+                    <p>Morning & Afternoon: Training + Lab<br>
+                    Topics: Building AI Tutors, Course ingestion, Quiz generation (MCQ/Short answers), Adaptive hints, Tracking student progress.</p>
+                    <div class="station-time">Scheduled: Sept 11, 2025 at 09:00 AM</div>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="timeline-station" id="station5">
+                <div class="station-dot" id="dot5"></div>
+                <div class="station-content" id="content5">
+                    <div class="station-status" id="status5">Upcoming</div>
+                    <h3>⚡ Day 5 - Hackathon Begins</h3>
+                    <p>Morning & Afternoon: Hackathon Starts<br>
+                    Topics: Define problem statement, select project topic, dataset preparation, structure setup, build MVP.</p>
+                    <div class="station-time">Scheduled: Sept 12, 2025 at 09:00 AM</div>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="timeline-station" id="station6">
+                <div class="station-dot" id="dot6"></div>
+                <div class="station-content" id="content6">
+                    <div class="station-status" id="status6">Upcoming</div>
+                    <h3>🏆 Day 6 - Hackathon Finale</h3>
+                    <p>Morning & Afternoon: Hackathon Ends<br>
+                    Topics: Project Evaluation & Presentation, Testing & Final Refinement, Demo & Awards.</p>
+                    <div class="station-time">Scheduled: Sept 13, 2025 at 09:00 AM</div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Enhanced About SREC -->
     <section id="about" class="about">
@@ -1012,43 +1037,131 @@ drawParticles();
     </section>
 
     <!-- Workshop Details -->
-    <section id="workshop" class="workshop-details">
-        <div class="container">
-            <h2 class="section-title">AI Workshop Details</h2>
-            <div class="workshop-grid">
-                <div class="workshop-card">
-                    <div class="ai-animation"></div>
-                    <h3>What is AI?</h3>
-                    <p>Artificial Intelligence (AI) is the simulation of human intelligence in machines programmed to think, learn, and problem-solve like humans. It encompasses machine learning, natural language processing, computer vision, and robotics.</p>
-                </div>
-                <div class="workshop-card">
-                    <div class="ai-animation" style="animation-delay: 0.5s;"></div>
-                    <h3>Why Use AI?</h3>
-                    <p>AI revolutionizes industries by automating tasks, improving decision-making, enhancing efficiency, reducing costs, and enabling innovations in healthcare, finance, transportation, and education.</p>
-                </div>
-                <div class="workshop-card">
-                    <div class="ai-animation" style="animation-delay: 1s;"></div>
-                    <h3>Current Role of AI</h3>
-                    <p>AI powers search engines, recommendation systems, autonomous vehicles, medical diagnostics, smart assistants, fraud detection, and personalized learning platforms, transforming how we live and work.</p>
-                </div>
-                <div class="workshop-card">
-                    <div class="ai-animation" style="animation-delay: 1.5s;"></div>
-                    <h3>Workshop Sessions</h3>
-                    <p>Interactive sessions covering AI fundamentals, machine learning algorithms, Python programming, data analysis, neural networks, and hands-on projects with real-world applications.</p>
-                </div>
-                <div class="workshop-card">
-                    <div class="ai-animation" style="animation-delay: 2s;"></div>
-                    <h3>Career Opportunities</h3>
-                    <p>Explore careers as AI Engineer, Data Scientist, Machine Learning Engineer, AI Research Scientist, Robotics Engineer, and AI Product Manager in leading tech companies.</p>
-                </div>
-                <div class="workshop-card">
-                    <div class="ai-animation" style="animation-delay: 2.5s;"></div>
-                    <h3>Certification</h3>
-                    <p>Receive official certification from SREC upon successful completion of the workshop, adding valuable credentials to your academic and professional portfolio.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="workshop" class="workshop-details">
+  <div class="container">
+    <h2 class="section-title">AI Workshop Details</h2>
+    <div class="workshop-grid">
+      
+      <div class="workshop-card">
+        <div class="ai-glow"></div>
+        <h3>What is AI?</h3>
+        <p>Artificial Intelligence (AI) is the simulation of human intelligence in machines programmed to think, learn, and problem-solve like humans. It encompasses machine learning, natural language processing, computer vision, and robotics.</p>
+      </div>
+
+      <div class="workshop-card">
+        <div class="ai-glow"></div>
+        <h3>Why Use AI?</h3>
+        <p>AI revolutionizes industries by automating tasks, improving decision-making, enhancing efficiency, reducing costs, and enabling innovations in healthcare, finance, transportation, and education.</p>
+      </div>
+
+      <div class="workshop-card">
+        <div class="ai-glow"></div>
+        <h3>Current Role of AI</h3>
+        <p>AI powers search engines, recommendation systems, autonomous vehicles, medical diagnostics, smart assistants, fraud detection, and personalized learning platforms, transforming how we live and work.</p>
+      </div>
+
+      <div class="workshop-card">
+        <div class="ai-glow"></div>
+        <h3>Workshop Sessions</h3>
+        <p>Interactive sessions covering AI fundamentals, machine learning algorithms, Python programming, data analysis, neural networks, and hands-on projects with real-world applications.</p>
+      </div>
+
+      <div class="workshop-card">
+        <div class="ai-glow"></div>
+        <h3>Career Opportunities</h3>
+        <p>Explore careers as AI Engineer, Data Scientist, Machine Learning Engineer, AI Research Scientist, Robotics Engineer, and AI Product Manager in leading tech companies.</p>
+      </div>
+
+      <div class="workshop-card">
+        <div class="ai-glow"></div>
+        <h3>Certification</h3>
+        <p>Receive official certification from SREC upon successful completion of the workshop, adding valuable credentials to your academic and professional portfolio.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section */
+.workshop-details {
+  padding: 80px 20px;
+  background: radial-gradient(circle at top left, #0a0f1c, #05070d);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00f5ff, #0077ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid */
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.workshop-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.workshop-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+/* AI Glow Effect */
+.ai-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, #00f5ff, #0077ff, #ff00ff, #00f5ff);
+  animation: spinGlow 6s linear infinite;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.workshop-card h3,
+.workshop-card p {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spinGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .workshop-card {
+    padding: 20px;
+  }
+}
+</style>
+
 
     <!-- Team Section -->
     <section id="team" class="team">
@@ -1069,7 +1182,7 @@ drawParticles();
                 <div class="member-photo">
                     <img src="principal.jpg" alt="Principal">
                 </div>
-                <h3>Dr. Principal</h3>
+                <h3>Dr.M.V.Subramanyam</h3>
                 <p class="role">Principal, SREC</p>
                 <p>Expert in Engineering Education & Research</p>
             </div>
@@ -1078,7 +1191,7 @@ drawParticles();
                 <div class="member-photo">
                     <img src="hod.jpg" alt="AI Expert">
                 </div>
-                <h3>Dr.R.Rama Devi </h3>
+                <h3>Mrs.N.Ramadevi </h3>
                 <p class="role">HOD of CSE-Data Science</p>
                 <p>AI Researcher & Machine Learning Specialist</p>
             </div>
@@ -1087,7 +1200,7 @@ drawParticles();
                 <div class="member-photo">
                     <img src="co-ordinator.jpg" alt="CSE Faculty">
                 </div>
-                <h3>Dr.K.Venkatesh Naik </h3>
+                <h3>Dr.R.Venkatesh Naik </h3>
                 <p class="role">Event Coordinator</p>
                 <p>Computer Science & AI Implementation Expert</p>
             </div>
@@ -1170,7 +1283,7 @@ drawParticles();
                         <span class="contact-icon">👨‍🏫</span>
                         <div>
                             <strong>Faculty Coordinator:</strong><br>
-                            Dr. CSE Head<br>
+                            Dr.R.Venkatesh Naik<br>
                             +91 9876 543 210
                         </div>
                     </div>
@@ -1236,13 +1349,13 @@ drawParticles();
     <script>
         // Event dates and timeline management
         const currentDate = new Date();
-        const eventStartDate = new Date('2025-08-20T09:00:00');
+        const eventStartDate = new Date('2025-09-08T13:00:00');
         const timelineEvents = [
-            { date: new Date('2025-08-10T09:00:00'), id: 'station1', name: 'Registration Opens' },
-            { date: new Date('2025-08-15T09:00:00'), id: 'station2', name: 'Pre-Workshop Materials' },
-            { date: new Date('2025-08-20T09:00:00'), id: 'station3', name: 'Workshop Day 1' },
-            { date: new Date('2025-08-21T09:00:00'), id: 'station4', name: 'Machine Learning Deep Dive' },
-            { date: new Date('2025-08-22T14:00:00'), id: 'station5', name: 'Project Showcase' }
+            { date: new Date('2025-09-08T09:59:59'), id: 'station1', name: 'Registration Opens' },
+            { date: new Date('2025-09-09T09:59:59'), id: 'station2', name: 'Pre-Workshop Materials' },
+            { date: new Date('2025-09-10T10:59:59'), id: 'station3', name: 'Workshop Day 1' },
+            { date: new Date('2025-09-11T09:59:59'), id: 'station4', name: 'Machine Learning Deep Dive' },
+            { date: new Date('2025-09-12T14:59:59'), id: 'station5', name: 'Project Showcase' }
         ];
         
         function updateCurrentDateTime() {
@@ -1267,7 +1380,7 @@ drawParticles();
             document.getElementById('dayCounter').textContent = days > 0 ? days : 'Event Started!';
             
             // Update registration status
-            const regCloseDate = new Date('2025-08-19T23:59:59');
+            const regCloseDate = new Date('2025-09-06T08:59:59');
             const regStatus = now < regCloseDate ? 'Open' : 'Closed';
             const regStatusEl = document.getElementById('regStatus');
             regStatusEl.textContent = regStatus;
