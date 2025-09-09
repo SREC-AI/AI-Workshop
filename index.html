@@ -948,7 +948,7 @@ drawParticles();
             <div class="welcome-logo">
                 <div class="ai-badge">🤖</div>
             </div>
-            <h3>PROMPT ENGINEERING FOR GENERATIVE AI: SHAPING THE FUTURE OF DATA SCIENCE  </h3>
+            <h3>PROMPT ENGINEERING FOR GENERATIVE AI: SHAPING THE FUTURE OF DATA SCIENCE</h3>
             <p class="welcome-organized">This prestigious event is organized by</p>
             <p class="welcome-department">📊 <strong>DATA SCIENCE DEPARTMENT</strong></p>
             <p class="welcome-college">Santhiram Engineering College, Nandyal</p>
@@ -963,7 +963,7 @@ drawParticles();
                 </div>
                 <div class="detail-item">
                     <span class="detail-icon">🎯</span>
-                    <span>200+ Students Registered</span>
+                    <span>750+ Students Registered</span>
                 </div>
             </div>
             <div class="welcome-buttons">
@@ -1068,16 +1068,16 @@ drawParticles();
 
 .ai-badge {
     display: inline-block;
-    font-size: 4rem;
+    font-size: 3rem;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
     animation: bounceIn 1s ease-out 0.5s both;
 }
@@ -1405,7 +1405,7 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-</script>
+</script>   
     <!-- Enhanced About SREC -->
     <section id="about" class="about">
         <div class="about-container">
@@ -1916,13 +1916,15 @@ document.head.appendChild(style);
     <script>
         // Event dates and timeline management
         const currentDate = new Date();
-        const eventStartDate = new Date('2025-09-08T13:00:00');
+        const eventStartDate = new Date('2025-08-20T09:00:00');
         const timelineEvents = [
-            { date: new Date('2025-09-08T09:59:59'), id: 'station1', name: 'Registration Opens' },
-            { date: new Date('2025-09-09T09:59:59'), id: 'station2', name: 'Pre-Workshop Materials' },
-            { date: new Date('2025-09-10T10:59:59'), id: 'station3', name: 'Workshop Day 1' },
-            { date: new Date('2025-09-11T09:59:59'), id: 'station4', name: 'Machine Learning Deep Dive' },
-            { date: new Date('2025-09-12T14:59:59'), id: 'station5', name: 'Project Showcase' }
+            { date: new Date('2025-09-08T09:00:00'), id: 'station1', name: 'Registration Opens' },
+            { date: new Date('2025-09-09T09:00:00'), id: 'station2', name: 'Pre-Workshop Materials' },
+            { date: new Date('2025-09-10T09:00:00'), id: 'station3', name: 'Workshop Day 1' },
+            { date: new Date('2025-09-11T09:00:00'), id: 'station4', name: 'Machine Learning Deep Dive' },
+            { date: new Date('2025-09-12T14:00:00'), id: 'station5', name: 'Project Showcase' },
+            { date: new Date('2025-09-13T15:00:00'), id: 'station6', name: 'Project Showcase' }
+
         ];
         
         function updateCurrentDateTime() {
@@ -1947,7 +1949,7 @@ document.head.appendChild(style);
             document.getElementById('dayCounter').textContent = days > 0 ? days : 'Event Started!';
             
             // Update registration status
-            const regCloseDate = new Date('2025-09-06T08:59:59');
+            const regCloseDate = new Date('2025-08-19T23:59:59');
             const regStatus = now < regCloseDate ? 'Open' : 'Closed';
             const regStatusEl = document.getElementById('regStatus');
             regStatusEl.textContent = regStatus;
@@ -2019,7 +2021,7 @@ document.head.appendChild(style);
         }
         
         // Live registration counter
-        let registrationCount = 200;
+        let registrationCount = 750;
         function updateRegistrationCount() {
             registrationCount += Math.floor(Math.random() * 5) + 1;
             const regCountEl = document.getElementById('registrationCount');
